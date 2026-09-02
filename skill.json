@@ -1,0 +1,42 @@
+{
+  "name": "genpark-rag-retrieval-faithfulness-hallucination-auditor-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Autonomous RAG retrieval faithfulness and hallucination score auditor verifying ground-truth alignment.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "rag-evaluation",
+  "tags": [
+    "rag-evaluation",
+    "ragas",
+    "trulens",
+    "hallucination-detector",
+    "ground-truth-audit"
+  ],
+  "inputs": {
+    "context_snippets": {
+      "type": "array"
+    },
+    "generated_answer": {
+      "type": "string"
+    },
+    "user_query": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "rag_audit_id": {
+      "type": "string"
+    },
+    "faithfulness_score_pct": {
+      "type": "number"
+    },
+    "hallucination_detected": {
+      "type": "boolean"
+    },
+    "evaluation_audit_dossier_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
